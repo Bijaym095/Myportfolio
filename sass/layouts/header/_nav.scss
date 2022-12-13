@@ -1,0 +1,85 @@
+.navbar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  .sticky {
+    background: #fff;
+    box-shadow: 0 1rem 3rem rgb(0 0 0 / 18%);
+    .navbar-brand {
+      color: black;
+    }
+    .nav-link {
+      color: #717275;
+      transition: all 0.2s;
+      &:hover {
+        color: $primary;
+      }
+    }
+    .custom-btn {
+      color: $primary;
+      border: 2px solid $primary;
+      &:hover {
+        background: $primary;
+        color: #fff;
+      }
+    }
+  }
+
+  &__container {
+    padding: 10px 25px;
+    background: #fff;
+    transition: all 0.2s linear;
+    @include media-breakpoint-up(lg) {
+      background: transparent;
+    }
+    border-radius: 5px;
+    @include media-breakpoint-down(lg) {
+      box-shadow: 0 1rem 3rem rgb(0 0 0 / 18%);
+    }
+  }
+  &__logo {
+    color: #000;
+    font-size: 32px;
+    font-weight: bold;
+    @include media-breakpoint-up(lg) {
+      color: #fff;
+    }
+    &:hover {
+      color: #fff;
+    }
+  }
+  &__toggler {
+    border: 0;
+    &:focus {
+      box-shadow: none;
+    }
+  }
+  &__nav-item {
+    margin-inline: 15px;
+  }
+  &__nav-link {
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: hsl(0, 0%, 100%);
+    cursor: pointer;
+    &:hover {
+      color: $primary;
+    }
+    @include media-breakpoint-down(lg) {
+      color: #717275;
+    }
+  }
+  &__cta-icon {
+    width: 47px;
+    height: 47px;
+    padding: 14px;
+    color: #fff;
+    background: $primary;
+    border-radius: 50%;
+    vertical-align: middle;
+    margin-right: 12px;
+  }
+}

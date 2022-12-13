@@ -1,0 +1,26 @@
+a,
+a:hover {
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.2s;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+ul,
+ol {
+  list-style: none;
+}
+.secondary-bg {
+  background: #f9f9f9;
+}
+.section-padding {
+  padding-block: 80px;
+  @include media-breakpoint-down(lg) {
+    padding-block: 40px;
+  }
+}
+.featured-border-bottom {
+  border-bottom: 1px solid #e9eaeb;
+}

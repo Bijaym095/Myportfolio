@@ -1,0 +1,33 @@
+.hero-btn {
+  background-color: $primary;
+  font-weight: bold;
+  border-radius: 20px;
+  color: #fff;
+  &:hover {
+    color: inherit;
+    background: $secondary;
+  }
+}
+.custom-btn {
+  border: 2px solid #fff;
+  color: #fff;
+  font-weight: 700;
+  border-radius: 30px;
+  &:hover {
+    border: 2px solid #fff;
+    background: #fff;
+    color: $primary;
+  }
+}
+.service-btn {
+  border: 2px solid #e9eaeb;
+  background: transparent;
+  color: #717275;
+  padding: 12px 24px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  &:hover {
+    background: $primary;
+    color: #fff;
+  }
+}

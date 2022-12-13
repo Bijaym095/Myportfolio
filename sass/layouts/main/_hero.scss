@@ -1,0 +1,63 @@
+.hero {
+  min-height: 600px;
+  background: #535da1;
+  position: relative;
+
+  &__overlay {
+    position: absolute;
+    inset: auto 0 0 0;
+  }
+  &__container {
+    position: relative;
+    padding-top: 100px;
+    min-height: 600px;
+    z-index: 1;
+    align-self: center;
+  }
+
+  &__content {
+    @include flex(center, flex-start);
+    flex-direction: column;
+  }
+  &__title-wrapper {
+    @include flex(flex-start, center);
+    margin-bottom: 16px;
+  }
+  &__avatar {
+    width: 90.4px;
+    height: 90.4px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 8px;
+  }
+  &__title {
+    font-size: 44px;
+    border-radius: 30px;
+    background: #fff;
+    padding: 8px 24px;
+    margin-bottom: 16px;
+    &--primary {
+      @extend .hero__title;
+      color: $primary;
+    }
+  }
+  &__btn {
+    padding: 12px 24px;
+    font-weight: bold;
+    color: white;
+    &:hover {
+      color: white;
+    }
+    a {
+      transition: none;
+    }
+  }
+  &__img-container {
+    min-height: 100%;
+  }
+  &__img {
+    min-width: 250px;
+    height: 100%;
+    object-fit: cover;
+  }
+}

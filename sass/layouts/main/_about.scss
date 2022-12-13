@@ -1,0 +1,39 @@
+.about {
+  &__image {
+    border-radius: 20px;
+  }
+  .row {
+    & > .col-lg-6:first-child {
+      margin-bottom: 32px;
+    }
+    & > .col-lg-6:last-child {
+      @include media-breakpoint-up(lg) {
+        padding: 0 20px;
+      }
+    }
+  }
+
+  &__main {
+    background: $primary;
+    border-radius: 10px;
+    @include flex(center, center);
+    padding: 10px 30px;
+    margin-bottom: 24px;
+  }
+  &__main-title {
+    margin: 0 24px 0 0;
+    color: #fff;
+  }
+  &__main-avatar {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  &__content-title {
+    margin-bottom: 16px;
+  }
+  &__content-text {
+    margin-bottom: 16px;
+  }
+}
