@@ -1,3 +1,9 @@
+html {
+  scroll-padding-block: 60px;
+  @include media-breakpoint-up(lg) {
+    scroll-padding-block: 80px;
+  }
+}
 a,
 a:hover {
   text-decoration: none;
@@ -23,4 +29,14 @@ ol {
 }
 .featured-border-bottom {
   border-bottom: 1px solid #e9eaeb;
+}
+.section-title-wrapper {
+  min-width: 100%;
+  margin-bottom: 24px;
+  @include media-breakpoint-up(sm) {
+    min-width: 60%;
+  }
+  @include media-breakpoint-up(md) {
+    margin-bottom: 48px;
+  }
 }

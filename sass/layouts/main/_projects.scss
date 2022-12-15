@@ -1,0 +1,55 @@
+.projects {
+  &__title-wrapper {
+    background: $primary;
+    @include flex(center, center);
+    max-width: 60%;
+    padding: 10px 30px;
+    border-radius: 10px;
+    margin-left: auto;
+  }
+  &__title-avatar {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  &__title {
+    margin-left: 16px;
+    color: #fff;
+  }
+  &__item {
+    background: #f9f9f9;
+    padding: 40px;
+    border-radius: 20px;
+    border: 2px solid transparent;
+    transition: all 0.2s;
+    height: 100%;
+    overflow: hidden;
+    &:hover {
+      border: 2px solid $primary;
+      .projects__item-img {
+        transform: rotate(0) translateY(0);
+      }
+    }
+  }
+  &__item-subtitle {
+    display: block;
+    font-weight: 500;
+    font-size: 16px;
+    color: $primary;
+    margin-bottom: 8px;
+  }
+  &__item-title {
+    margin-bottom: 24px;
+  }
+  &__item-wrapper {
+    .row > * {
+      margin-bottom: 32px;
+    }
+  }
+  &__item-img {
+    border-radius: 20px;
+    transform: rotate(10deg) translateY(80px);
+    transition: all 0.4s ease;
+  }
+}

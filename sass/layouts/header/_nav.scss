@@ -16,6 +16,9 @@
       &:hover {
         color: $primary;
       }
+      &.active-link {
+        color: $primary;
+      }
     }
     .custom-btn {
       color: $primary;
@@ -64,9 +67,22 @@
     text-transform: uppercase;
     font-weight: 500;
     color: hsl(0, 0%, 100%);
+    border-bottom: 2px solid transparent;
     cursor: pointer;
+    position: relative;
     &:hover {
       color: $primary;
+    }
+    &.active-link {
+      color: $primary;
+      &:after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 10px;
+        height: 10px;
+        background: blue;
+      }
     }
     @include media-breakpoint-down(lg) {
       color: #717275;

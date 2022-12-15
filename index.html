@@ -3,12 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, 
+       initial-scale=1.0"
+    />
     <title>Portfolio Website using Bootstrap 5 and SCSS</title>
     <link rel="stylesheet" href="./assets/css/icons.css" />
     <link rel="stylesheet" href="./assets/css/main.css" />
   </head>
   <body>
+    <!-- <header> -->
     <header>
       <nav class="navbar navbar-expand-lg">
         <div id="navcontainer" class="navbar__container container">
@@ -30,50 +35,77 @@
           >
             <ul class="navbar__nav navbar-nav">
               <li class="navbar__nav-item nav-item">
-                <a href="#home" class="navbar__nav-link nav-link">Home</a>
+                <a
+                  href="#home"
+                  class="nav-link navbar__nav-link home active-link"
+                  >Home</a
+                >
               </li>
               <li class="navbar__nav-item nav-item">
-                <a class="navbar__nav-link nav-link" href="#about">About</a>
+                <a class="navbar__nav-link about nav-link" href="#about"
+                  >About</a
+                >
               </li>
               <li class="navbar__nav-item nav-item">
-                <a class="navbar__nav-link nav-link" href="#services"
+                <a
+                  data-id="services"
+                  class="navbar__nav-link nav-link services"
+                  href="#services"
                   >Services</a
                 >
               </li>
               <li class="navbar__nav-item nav-item">
-                <a class="navbar__nav-link nav-link" href="#">Projects</a>
+                <a
+                  data-id="projects"
+                  class="navbar__nav-link nav-link projects"
+                  href="#projects"
+                  >Projects</a
+                >
               </li>
               <li class="navbar__nav-item nav-item">
-                <a class="navbar__nav-link nav-link" href="#">Contact</a>
+                <a
+                  data-id="contact"
+                  class="navbar__nav-link nav-link contact"
+                  href="#contact"
+                  >Contact</a
+                >
               </li>
             </ul>
           </div>
           <div class="navbar__cta d-none d-lg-block">
             <span class="navbar__cta-icon icon-phone"></span>
-            <a class="navbar__cta-btn btn custom-btn" href="#">120-240-9600</a>
+            <a class="navbar__cta-btn btn custom-btn" href="#contact"
+              >120-240-9600</a
+            >
           </div>
         </div>
       </nav>
     </header>
+
+    <!-- </header> -->
     <main>
-      <section class="hero" id="home">
-        <div class="hero__overlay">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-            <path
-              fill="#14b789"
-              fill-opacity="1"
-              d="M0,256L48,229.3C96,203,192,149,288,122.7C384,96,480,96,576,128C672,160,768,224,864,213.3C960,203,1056,117,1152,117.3C1248,117,1344,203,1392,245.3L1440,288L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
-            ></path>
-          </svg>
+      <section class="hero section" id="home">
+        <div class="hero__overlay-container">
+          <div class="hero__overlay">
+            <picture class="hero__overlay-img">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                <path
+                  fill="#535da1"
+                  fill-opacity="1"
+                  d="M0,192L48,197.3C96,203,192,213,288,192C384,171,480,117,576,122.7C672,128,768,192,864,197.3C960,203,1056,149,1152,122.7C1248,96,1344,96,1392,96L1440,96L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"
+                ></path>
+              </svg>
+            </picture>
+          </div>
         </div>
         <div class="hero__container container">
           <div class="row">
             <div class="col-lg-8">
               <div class="hero__content">
-                <div class="hero__title-wrapper">
+                <div class="hero__title-wrapper section-title-wrapper">
                   <picture
                     ><img
-                      class="hero__avatar"
+                      class="hero__avatar title-wrapper-avatar"
                       src="https://templatemo.com/templates/templatemo_578_first_portfolio/images/happy-bearded-young-man.jpg"
                       alt="happy-bearded-young-man"
                   /></picture>
@@ -82,7 +114,7 @@
                 <h2 class="hero__title--primary">
                   I’m available for freelance work.
                 </h2>
-                <button class="hero__btn btn btn-primary rounded-pill">
+                <button class="hero__btn btn btn-outline-primary rounded-pill">
                   <a href="#">Let's begin</a>
                 </button>
               </div>
@@ -101,7 +133,7 @@
         </div>
       </section>
       <!-- about -->
-      <section class="about" id="about">
+      <section class="about section" id="about">
         <div class="about__container container section-padding">
           <div class="row">
             <div class="col-lg-6">
@@ -144,7 +176,7 @@
       </section>
       <!-- about -->
       <!-- featured -->
-      <section class="featured section-padding secondary-bg">
+      <section class="featured section section-padding secondary-bg">
         <div class="featured__container container">
           <div class="row">
             <!-- featured-info -->
@@ -219,7 +251,7 @@
       </section>
       <!-- featured -->
       <!-- clients -->
-      <section class="clients section-padding">
+      <section class="clients section section-padding">
         <div class="clients__container container">
           <h3 class="clients__container-title">Companies I've had worked</h3>
           <div class="clients__item-wrapper">
@@ -268,9 +300,12 @@
       </section>
       <!-- clients -->
       <!-- services -->
-      <section class="services secondary-bg section-padding" id="services">
+      <section
+        class="services section secondary-bg section-padding"
+        id="services"
+      >
         <div class="services__container container">
-          <div class="services__title-wrapper">
+          <div class="services__title-wrapper section-title-wrapper">
             <picture
               ><img
                 class="services__title-avatar"
@@ -396,8 +431,293 @@
         </div>
       </section>
       <!-- services -->
+      <!-- projects -->
+      <section class="projects section section-padding" id="projects">
+        <div class="projects__container container">
+          <div class="projects__title-wrapper section-title-wrapper">
+            <picture
+              ><img
+                class="projects__title-avatar"
+                src="https://templatemo.com/templates/templatemo_578_first_portfolio/images/white-desk-work-study-aesthetics.jpg"
+                alt="white-desk-work-study-aesthetics"
+            /></picture>
+            <h2 class="projects__title">Projects</h2>
+          </div>
+          <!-- project-item-wrapper -->
+          <div class="projects__item-wrapper">
+            <div class="row">
+              <!-- project-item1 -->
+              <div class="col-md-6 col-lg-4">
+                <div class="projects__item">
+                  <h3 class="projects__item-title">
+                    <small class="projects__item-subtitle">Branding</small>
+                    Zoik agency
+                  </h3>
+                  <picture
+                    ><img
+                      class="projects__item-img"
+                      src="https://templatemo.com/templates/templatemo_578_first_portfolio/images/projects/nikhil-KO4io-eCAXA-unsplash.jpg"
+                      alt=""
+                  /></picture>
+                </div>
+              </div>
+              <!-- project-item1 -->
+              <!-- project-item2 -->
+              <div class="col-md-6 col-lg-4">
+                <div class="projects__item">
+                  <h3 class="projects__item-title">
+                    <small class="projects__item-subtitle">Photography</small>
+                    The Watch
+                  </h3>
+                  <picture
+                    ><img
+                      class="projects__item-img"
+                      src="https://templatemo.com/templates/templatemo_578_first_portfolio/images/projects/the-5th-IQYR7N67dhM-unsplash.jpg"
+                      alt=""
+                  /></picture>
+                </div>
+              </div>
+              <!-- project-item2 -->
+              <!-- project-item3 -->
+              <div class="col-md-6 col-lg-4">
+                <div class="projects__item">
+                  <h3 class="projects__item-title">
+                    <small class="projects__item-subtitle">Website</small>
+                    Polo
+                  </h3>
+                  <picture
+                    ><img
+                      class="projects__item-img"
+                      src="https://templatemo.com/templates/templatemo_578_first_portfolio/images/projects/true-agency-9Bjog5FZ-oc-unsplash.jpg"
+                      alt=""
+                  /></picture>
+                </div>
+              </div>
+              <!-- project-item3 -->
+            </div>
+          </div>
+          <!-- project-item-wrapper -->
+        </div>
+      </section>
+      <!-- projects -->
+      <section
+        class="contact section secondary-bg section-padding"
+        id="contact"
+      >
+        <div class="contact__container container">
+          <div class="contact__title-wrapper section-title-wrapper">
+            <picture
+              ><img
+                class="title-wrapper-avatar contact__title-avatar"
+                src="https://templatemo.com/templates/templatemo_578_first_portfolio/images/aerial-view-man-using-computer-laptop-wooden-table.jpg"
+                alt="aerial-view-man-using-computer-laptop-wooden-table"
+            /></picture>
+            <h2 class="contact__title">Say Hi</h2>
+          </div>
+          <div class="contact__wrapper row">
+            <!-- contact-info -->
+            <div class="col-lg-6">
+              <div class="contact__info">
+                <div class="contact__info-service">
+                  <strong class="service-title">Services</strong>
+                  <ul class="service-menu">
+                    <li class="service-menu-item">
+                      <a class="service-menu-link" href="#">Websites</a>
+                    </li>
+                    <li class="service-menu-item">
+                      <a class="service-menu-link" href="#">Branding</a>
+                    </li>
+                    <li class="service-menu-item">
+                      <a class="service-menu-link" href="#">Ecommerce</a>
+                    </li>
+                    <li class="service-menu-item">
+                      <a class="service-menu-link" href="#">SEO</a>
+                    </li>
+                  </ul>
+                  <strong class="service-title">Stay connected</strong>
+                  <ul class="social-links-container">
+                    <a class="social-link" href="#" target="_blank"
+                      ><span class="icon-twitter social-link-icon"></span
+                    ></a>
+                    <a class="social-link" href="#" target="_blank"
+                      ><span class="icon-instagram social-link-icon"></span
+                    ></a>
+                    <a class="social-link" href="#" target="_blank"
+                      ><span class="icon-pinterest social-link-icon"></span
+                    ></a>
+                    <a class="social-link" href="#" target="_blank"
+                      ><span class="icon-youtube social-link-icon"></span
+                    ></a>
+                  </ul>
+                  <strong class="service-title">Start a project</strong>
+                  <p class="service-main-text">
+                    I’m available for freelance projects
+                  </p>
+                </div>
+                <div class="contact__info-about">
+                  <strong class="about-title">About</strong>
+                  <p>
+                    Joshua is a professional web developer. Feel free to get in
+                    touch with me.
+                  </p>
+                  <strong class="about-title">Email</strong>
+                  <p>
+                    <a href="mailto:hello@josh.design">hello@josh.design</a>
+                  </p>
+                  <strong class="about-title">Call</strong>
+                  <p><a href="tel:120-240-9600">120-240-9600</a></p>
+                </div>
+              </div>
+            </div>
+            <!-- contact-info -->
+            <!-- contact-form  -->
+            <div class="col-lg-6">
+              <div class="contact__form-container">
+                <form class="contact__form" action="">
+                  <div class="row">
+                    <!-- name -->
+                    <div class="col-md-6">
+                      <div class="form-floating">
+                        <input
+                          type="text"
+                          class="form-control"
+                          placeholder="email"
+                          id="floatingTextarea"
+                          required
+                        />
+                        <label for="floatingTextarea">Name</label>
+                      </div>
+                    </div>
+                    <!-- name -->
+                    <!-- email -->
+                    <div class="col-md-6">
+                      <div class="form-floating">
+                        <input
+                          type="email"
+                          class="form-control"
+                          placeholder="email"
+                          id="floatingTextarea"
+                          required
+                        />
+                        <label for="floatingTextarea">Email</label>
+                      </div>
+                    </div>
+                    <!-- email -->
+                    <!-- checkbox-1 -->
+                    <div class="col-6 col-lg-3">
+                      <div class="form-check form-check-inline">
+                        <input
+                          class="form-check-input contact__form-checkinput"
+                          type="checkbox"
+                          id="inlineCheckbox1"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox1">
+                          <span class="icon-network form-check-icon"></span>
+                          <span class="form-check-label-text">Websites</span>
+                        </label>
+                      </div>
+                    </div>
+                    <!-- checkbox1 -->
+                    <!-- checkbox-2 -->
+                    <div class="col-6 col-lg-3">
+                      <div class="form-check form-check-inline">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox2"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox2">
+                          <span class="icon-bulb form-check-icon"></span>
+                          <span class="form-check-label-text">Branding</span>
+                        </label>
+                      </div>
+                    </div>
+                    <!-- checkbox2 -->
+                    <!-- checkbox-3 -->
+                    <div class="col-6 col-lg-3">
+                      <div class="form-check form-check-inline">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox3"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox3">
+                          <span class="icon-phone1 form-check-icon"></span>
+                          <span class="form-check-label-text">Ecommerce</span>
+                        </label>
+                      </div>
+                    </div>
+                    <!-- checkbox3 -->
+                    <!-- checkbox4 -->
+                    <div class="col-6 col-lg-3">
+                      <div class="form-check form-check-inline">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox4"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox4">
+                          <span class="icon-google form-check-icon"></span>
+                          <span class="form-check-label-text">SEO</span>
+                        </label>
+                      </div>
+                    </div>
+                    <!-- checkbox4 -->
+                    <!-- textarea -->
+                    <div class="col-md-12">
+                      <div class="form-floating">
+                        <textarea
+                          class="form-control"
+                          placeholder="Tell me about the project"
+                          id="floatingTextarea"
+                          rows="7"
+                        ></textarea>
+                        <label for="floatingTextarea"
+                          >Tell me about the project</label
+                        >
+                      </div>
+                    </div>
+                    <!-- textarea -->
+                    <!-- submit-btn -->
+                    <div class="col-lg-12">
+                      <div class="form-btn-container">
+                        <button
+                          class="btn btn-primary rounded-pill form-submit-btn"
+                          type="submit"
+                        >
+                          Send
+                        </button>
+                      </div>
+                    </div>
+                    <!-- submit-btn -->
+                  </div>
+                </form>
+              </div>
+            </div>
+            <!-- contact-form  -->
+          </div>
+        </div>
+      </section>
     </main>
-    <footer></footer>
+    <footer class="footer">
+      <div class="footer__container container">
+        <p class="footer__copyright-text">
+          <span>
+            Copyright &copy; 2022
+            <a
+              href="https://templatemo.com/live/templatemo_578_first_portfolio"
+              target="_blank"
+              >First Portfolio</a
+            >
+            Company. All rights reserved.
+          </span>
+          <span
+            >Design:
+            <a href="https://templatemo.com/" target="_blank">TemplateMo</a>
+          </span>
+        </p>
+      </div>
+    </footer>
     <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="./main.js"></script>
   </body>

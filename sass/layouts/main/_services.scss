@@ -1,12 +1,11 @@
 .services {
   &__title-wrapper {
-    max-width: 80%;
-    margin: 0 auto;
+    max-width: 60%;
     background: $primary;
     border-radius: 10px;
     @include flex(center, center);
     padding: 10px 30px;
-    margin-bottom: 24px;
+    margin-inline: auto;
   }
   &__title-avatar {
     width: 150px;
@@ -21,13 +20,15 @@
   &__card {
     background: #fff;
     padding: 40px 40px 240px 40px;
+    @include media-breakpoint-down(md) {
+      padding: 20px 20px 240px 20px;
+    }
     border-radius: 10px;
     border: 2px solid transparent;
     transition: all 0.2s linear;
     overflow: hidden;
     position: relative;
     height: 100%;
-    flex-grow: 1;
     z-index: 1;
     &:hover {
       border: 2px solid $primary;
@@ -51,6 +52,12 @@
     border-bottom: 1px solid #dee2e6;
     padding-bottom: 16px;
     margin-bottom: 16px;
+  }
+  &__header-title {
+    @include media-breakpoint-down(md) {
+      font-weight: 12px;
+    }
+    margin: 0 10px 0 0;
   }
   &__header-btn {
     background: $secondary;
