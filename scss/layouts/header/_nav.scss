@@ -5,19 +5,20 @@
   left: 0;
   z-index: 99;
   .sticky {
-    background: #fff;
-    box-shadow: 0 1rem 3rem rgb(0 0 0 / 18%);
+    background: hsl(0, 0%, 100%);
+    box-shadow: 0 1rem 3rem hsla(0, 0%, 0%, 0.18);
     .navbar-brand {
-      color: black;
+      color: hsl(0, 0%, 0%);
     }
     .nav-link {
-      color: #717275;
+      color: hsl(225, 2%, 45%);
       transition: all 0.2s;
       &:hover {
         color: $primary;
       }
       &.active-link {
         color: $primary;
+        border-bottom: 2px solid $primary;
       }
     }
     .custom-btn {
@@ -25,25 +26,29 @@
       border: 2px solid $primary;
       &:hover {
         background: $primary;
-        color: #fff;
+        color: hsl(0, 0%, 100%);
       }
+    }
+    .cta-icon {
+      color: hsl(0, 0%, 100%);
+      background: $primary;
     }
   }
 
   &__container {
     padding: 10px 25px;
-    background: #fff;
+    background: hsl(0, 0%, 100%);
     transition: all 0.2s linear;
     @include media-breakpoint-up(lg) {
       background: transparent;
     }
     border-radius: 5px;
     @include media-breakpoint-down(lg) {
-      box-shadow: 0 1rem 3rem rgb(0 0 0 / 18%);
+      box-shadow: 0 1rem 3rem hsla(0, 0%, 0%, 0.18);
     }
   }
   &__logo {
-    color: #000;
+    color: hsl(0, 0%, 0%);
     font-size: 32px;
     font-weight: bold;
     @include media-breakpoint-up(lg) {
@@ -75,14 +80,7 @@
     }
     &.active-link {
       color: $primary;
-      &:after {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 10px;
-        height: 10px;
-        background: blue;
-      }
+      border-bottom: 2px solid $primary;
     }
     @include media-breakpoint-down(lg) {
       color: #717275;
@@ -92,8 +90,8 @@
     width: 47px;
     height: 47px;
     padding: 14px;
-    color: #fff;
-    background: $primary;
+    color: hsl(0, 0%, 0%);
+    background: hsl(0, 0%, 100%);
     border-radius: 50%;
     vertical-align: middle;
     margin-right: 12px;

@@ -24,16 +24,13 @@
 
   &__container {
     position: relative;
-    padding-top: 100px;
+    padding-block: 100px;
     min-height: 600px;
     z-index: 1;
     align-self: center;
+    @include flex(flex-start, center);
   }
 
-  &__content {
-    @include flex(center, flex-start);
-    flex-direction: column;
-  }
   &__title-wrapper {
     @include flex(flex-start, center);
     margin-bottom: 16px;
@@ -45,6 +42,9 @@
     border-radius: 50%;
   }
   &__title {
+    @include media-breakpoint-down(md) {
+      font-size: 30px;
+    }
     font-size: 44px;
     border-radius: 30px;
     background: #fff;

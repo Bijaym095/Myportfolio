@@ -19,7 +19,7 @@ window.addEventListener("scroll", () => {
   const sections = document.querySelectorAll("section");
   let current = "";
   sections.forEach((section) => {
-    if (scrollPosition >= section.offsetTop) {
+    if (scrollPosition + 90 >= section.offsetTop) {
       current = section.getAttribute("id");
     }
   });
