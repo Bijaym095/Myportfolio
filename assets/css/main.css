@@ -10933,6 +10933,12 @@ p {
   left: 0;
   z-index: 99;
 }
+.navbar .collapse {
+  display: block;
+}
+.navbar .show {
+  left: 0;
+}
 .navbar .sticky {
   background: hsl(0deg, 0%, 100%);
   box-shadow: 0 1rem 3rem hsla(0deg, 0%, 0%, 0.18);
@@ -10949,7 +10955,11 @@ p {
 }
 .navbar .sticky .nav-link.active-link {
   color: #14b789;
-  border-bottom: 2px solid #14b789;
+}
+@media (min-width: 1200px) {
+  .navbar .sticky .nav-link.active-link {
+    border-bottom: 2px solid #14b789;
+  }
 }
 .navbar .sticky .custom-btn {
   color: #14b789;
@@ -10998,6 +11008,29 @@ p {
 .navbar__toggler:focus {
   box-shadow: none;
 }
+@media (max-width: 991.98px) {
+  .navbar__links-container {
+    padding-block: 80px;
+    top: 0;
+    left: -250px;
+    position: fixed;
+    background: #eff7f6;
+    width: 250px;
+    text-align: center;
+    height: 100%;
+    transition: all 0.3s;
+  }
+}
+.navbar__links-container .navbar-nav {
+  position: relative;
+}
+.navbar__links-container .icon-close {
+  color: rgba(0, 0, 0, 0.55);
+  position: absolute;
+  top: 30px;
+  font-weight: 600;
+  right: 45px;
+}
 .navbar__nav-item {
   margin-inline: 15px;
 }
@@ -11015,7 +11048,11 @@ p {
 }
 .navbar__nav-link.active-link {
   color: #14b789;
-  border-bottom: 2px solid #14b789;
+}
+@media (min-width: 1200px) {
+  .navbar__nav-link.active-link {
+    border-bottom: 2px solid #14b789;
+  }
 }
 @media (max-width: 991.98px) {
   .navbar__nav-link {

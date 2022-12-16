@@ -4,6 +4,12 @@
   top: 0;
   left: 0;
   z-index: 99;
+  .collapse {
+    display: block;
+  }
+  .show {
+    left: 0;
+  }
   .sticky {
     background: hsl(0, 0%, 100%);
     box-shadow: 0 1rem 3rem hsla(0, 0%, 0%, 0.18);
@@ -18,7 +24,9 @@
       }
       &.active-link {
         color: $primary;
-        border-bottom: 2px solid $primary;
+        @include media-breakpoint-up(xl) {
+          border-bottom: 2px solid $primary;
+        }
       }
     }
     .custom-btn {
@@ -64,6 +72,30 @@
       box-shadow: none;
     }
   }
+  &__links-container {
+    @include media-breakpoint-down(lg) {
+      padding-block: 80px;
+      top: 0;
+      left: -250px;
+      position: fixed;
+      background: #eff7f6;
+      width: 250px;
+      text-align: center;
+      height: 100%;
+      transition: all 0.3s;
+    }
+    .navbar-nav {
+      position: relative;
+    }
+    .icon-close {
+      color: rgba(0, 0, 0, 0.55);
+      position: absolute;
+      top: 30px;
+      font-weight: 600;
+      right: 45px;
+    }
+  }
+
   &__nav-item {
     margin-inline: 15px;
   }
@@ -80,7 +112,9 @@
     }
     &.active-link {
       color: $primary;
-      border-bottom: 2px solid $primary;
+      @include media-breakpoint-up(xl) {
+        border-bottom: 2px solid $primary;
+      }
     }
     @include media-breakpoint-down(lg) {
       color: #717275;

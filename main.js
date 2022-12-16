@@ -13,6 +13,12 @@ window.addEventListener("scroll", () => {
   }
 });
 
+//closing toggle menu
+const closeButton = document.querySelector(".icon-close");
+closeButton.addEventListener("click", () => {
+  linksContainer.classList.remove("show");
+});
+
 //active menu class while scrolling the window
 window.addEventListener("scroll", () => {
   const scrollPosition = scrollY;
